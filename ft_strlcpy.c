@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:43:16 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/11 16:35:05 by alvega-g         ###   ########.fr       */
+/*   Created: 2023/09/11 18:11:40 by alvega-g          #+#    #+#             */
+/*   Updated: 2023/09/11 18:17:32 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	char			*temp;
+	unsigned int	x;
 
+	x = ft_strlen(src);
 	i = 0;
-	temp = str;
-	while (i != len)
+	if (size != 0)
 	{
-		temp[i] = c;
-		i++;
+		while (src [i] && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	return (str);
+	return (x);
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
 
-int	main(void)
+int	main()
 {
-	char	str[20];
+	char a[] = "Source";
+	char b[] = "Destination";
+	unsigned int c = 5;
 
-	str[20] = "Hello World";
-	printf("%s\n", str);
-	memset(str + 3, '.', 3);
-	printf("%s", str);
+	printf("STRING A = %s\n", a);
+	printf("STRING B = %s\n", b);
+	ft_strlcpy(a, b, c);
+	printf("STRING cambiado = %s\n", a);
+	return (0);
 }
 */

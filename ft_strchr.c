@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:43:16 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/11 16:35:05 by alvega-g         ###   ########.fr       */
+/*   Created: 2023/09/11 18:37:26 by alvega-g          #+#    #+#             */
+/*   Updated: 2023/09/11 19:03:25 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+char	*ft_strchr(char *s, int c)
 {
-	unsigned int	i;
-	char			*temp;
+	int	i;
 
 	i = 0;
-	temp = str;
-	while (i != len)
+	while (c > 255)
+		c -= 256;
+	while (s[i])
 	{
-		temp[i] = c;
-		i++;
+		if (c == s[i])
+			return (&s[i]);
+		else
+			i++;
 	}
-	return (str);
+	if (c == '\0')
+		return (&s[i++]);
+	return (0);
 }
 
-/*
-#include <stdio.h>
-#include <string.h>
+// int main()
+// {
+// 	char *s = "Hola";
 
-int	main(void)
-{
-	char	str[20];
-
-	str[20] = "Hello World";
-	printf("%s\n", str);
-	memset(str + 3, '.', 3);
-	printf("%s", str);
-}
-*/
+// 	printf("%s\n", ft_strchr(s, 'a' + 256));
+// }

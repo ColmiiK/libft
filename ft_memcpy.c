@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:43:16 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/11 16:35:05 by alvega-g         ###   ########.fr       */
+/*   Created: 2023/09/11 16:31:29 by alvega-g          #+#    #+#             */
+/*   Updated: 2023/09/11 17:17:21 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned int	i;
-	char			*temp;
+	char			*temp_dst;
+	const char		*temp_src;
 
 	i = 0;
-	temp = str;
-	while (i != len)
+	temp_dst = dst;
+	temp_src = src;
+	if (!temp_dst && !temp_src)
+		return (0);
+	while (i != n)
 	{
-		temp[i] = c;
+		temp_dst[i] = temp_src[i];
 		i++;
 	}
-	return (str);
+	return (dst);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	str[20];
-
-	str[20] = "Hello World";
-	printf("%s\n", str);
-	memset(str + 3, '.', 3);
-	printf("%s", str);
-}
-*/

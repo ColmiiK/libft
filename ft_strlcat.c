@@ -1,43 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:43:16 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/11 16:35:05 by alvega-g         ###   ########.fr       */
+/*   Created: 2023/09/11 18:18:14 by alvega-g          #+#    #+#             */
+/*   Updated: 2023/09/11 18:19:15 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	char			*temp;
+	unsigned int	j;
+	unsigned int	x;
 
 	i = 0;
-	temp = str;
-	while (i != len)
-	{
-		temp[i] = c;
+	while (dest[i])
 		i++;
+	j = 0;
+	while (src[j])
+		j++;
+	x = j;
+	j = 0;
+	if (size < i)
+		x += size;
+	else
+		x += i;
+	while (src[j] && (i + 1) < size)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	return (str);
+	dest[i] = '\0';
+	return (x);
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	char	str[20];
+	char	destination[11] = "Hello";
+	char	*source = "World";
 
-	str[20] = "Hello World";
-	printf("%s\n", str);
-	memset(str + 3, '.', 3);
-	printf("%s", str);
+	strlcat(destination, source, 11);
+	printf("%s\n", destination);
+	return (0);
 }
 */
