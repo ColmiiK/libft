@@ -10,24 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// void	*ft_memchr(void *s, int c, size_t n)
-// {
-// 	unsigned int	i;
+void	*ft_memchr(void *s, int c, size_t n)
+{
+	unsigned int	i;
+	unsigned char	*src;
 
-// 	i = 0;
-// 	while (i < n)
-// 	{
-// 		if (c == s[i])
-// 			return ((void *)&s[i]);
-// 		else
-// 			i++;
-// 	}
-// 	if (c == '\0')
-// 		return ((void *)s[i++]);
-// 	return (0);
-// }
+	i = 0;
+	src = s;
+	while (i < n)
+	{
+		if ((unsigned char)c == src[i])
+			return ((void *)&src[i]);
+		else
+			i++;
+	}
+	if (c == '\0')
+		return ((void *)&src[i++]);
+	return (0);
+}
 
 // int main()
 // {
