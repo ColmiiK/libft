@@ -39,5 +39,7 @@ void			*ft_memchr(void *s, int c, size_t n);
 int				ft_memcmp(void *s1, void *s2, size_t n);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);
 int				ft_atoi(char *str);
+void			*ft_calloc(size_t n, size_t size);
+char			*ft_strdup(char *s);
 
 #endif
