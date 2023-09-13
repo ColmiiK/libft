@@ -18,6 +18,7 @@ char	*ft_strrchr(char *s, int c)
 	char	*temp;
 
 	i = 0;
+	temp = NULL;
 	if (!s)
 		return (0);
 	while (c > 255)
@@ -32,11 +33,7 @@ char	*ft_strrchr(char *s, int c)
 		else
 			i++;
 	}
-	if (temp)
-		return (temp);
-	if (c == '\0')
-		return (&s[i++]);
-	return (0);
+	return (temp);
 }
 
 // int main()
