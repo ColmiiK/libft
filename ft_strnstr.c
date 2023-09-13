@@ -21,9 +21,9 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 	j = 0;
 	if (needle[0] == '\0')
 		return (haystack);
-	while (haystack[j] && j <= len)
+	while (haystack[j])
 	{
-		while (haystack[j + i] == needle[i] && needle[i])
+		while (haystack[j + i] == needle[i] && needle[i] && j + i < len)
 			i++;
 		if (needle[i] == '\0')
 			return (haystack + j);
@@ -37,7 +37,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 // {
 // 	char * big = "123456789";
 //     char * little = "9";
-// 	size_t max = 8;
+//	size_t max = 8;
 //     char *s1 = strnstr(big, little, max);
 //     char *s2 = ft_strnstr(big, little, max);
 
