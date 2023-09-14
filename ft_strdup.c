@@ -6,20 +6,18 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:31:28 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/13 11:31:28 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/14 09:44:47 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(char *s)
+char	*ft_strdup(char *s)
 {
 	int		i;
 	char	*dest;
 
 	i = 0;
-	if (!s)
-		return (0);
 	dest = (char *)malloc(sizeof(*s) * (ft_strlen(s) + 1));
 	if (!dest)
 		return (0);
