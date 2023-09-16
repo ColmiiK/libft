@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:35:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/16 10:52:17 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/16 13:25:36 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	count(int n)
 	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (1);
+	if (n <= 0)
+		i++;
 	while (n != 0)
 	{
 		n /= 10;
@@ -27,65 +27,51 @@ int	count(int n)
 	return (i);
 }
 
-char	*reverse(char *s)
+void	fill_number(int j, int i, int n, char *s)
 {
-	int		i;
-	int		j;
-	int		size;
-	char	caja;
-
-	size = ft_strlen(s);
-	i = 0;
-	j = size - 1;
-	while (i < (size / 2))
+	while (j > i)
 	{
-		caja = s[i];
-		s[i] = s[j];
-		s[j] = caja;
-		i++;
+		s[j - 1] = n % 10 + '0';
+		n /= 10;
 		j--;
 	}
-	return (s);
 }
 
 char	*ft_itoa(int n)
 {
 	int		i;
-	char	*number;
-	int		is_negative;
+	int		j;
+	char	*s;
 
 	i = 0;
-	number = 0;
-	is_negative = 0;
-	if (n < 0)
-	{
-		n *= -1;
-		is_negative = -1;
-	}
-	if (!number)
+	j = count(n);
+	s = (char *)malloc(sizeof(char) * j + 1);
+	if (!s)
 		return (0);
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (is_negative)
-		number = (char *)malloc(sizeof(char) * count(n) + 1);
-	if (!is_negative)
-		number = (char *)malloc(sizeof(char) * count(n));
-	while (n != 0)
 	{
-		number[i++] = (n % 10) + '0';
-		n /= 10;
+		s[0] = '-';
+		s[1] = '2';
+		n = 147483648;
+		i = 2;
 	}
-	if (is_negative)
-		number[i] = '-';
-	return (ft_strdup(reverse(number)));
+	if (n < 0)
+	{
+		s[0] = '-';
+		i = 1;
+		n = -n;
+	}
+	fill_number(j, i, n, s);
+	s[j] = 0;
+	return (s);
 }
 // int	main(void)
 // {
-// 	int n = -12345;
-// 	char *s = ft_itoa(n);
+// 	int		n;
+// 	char	*s;
 
+// 	n = -12345;
+// 	s = ft_itoa(n);
 // 	printf("%s\n", s);
 // 	free(s);
 // }
