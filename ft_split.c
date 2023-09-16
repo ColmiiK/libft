@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 13:11:01 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/16 11:10:26 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/16 13:04:29 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 int	word_count(const char *s, char c)
 {
+	int	count;
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] != c && j == 0)
+		if (s[i] != c)
 		{
-			j = 1;
-			i++;
+			while (s[i] && s[i] != c)
+				i++;
+			count++;
 		}
-		else if (s[i] == c)
-			j = 0;
-		i++;
+		else
+			i++;
 	}
-	return (i);
+	return (count);
 }
 
 char	*fill(const char *s, int start, int end)
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	index = -1;
-	split = malloc((word_count(s, c) + 1) * sizeof(char *));
+	split = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
 	if (!s || !split)
 		return (0);
 	while (i <= ft_strlen(s))
@@ -95,3 +95,5 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	free(split);
 // }
+
+
