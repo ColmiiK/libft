@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:35:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/15 16:02:57 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/16 10:52:17 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	i = 0;
+	number = 0;
 	is_negative = 0;
 	if (n < 0)
 	{
