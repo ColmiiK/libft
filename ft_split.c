@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 13:11:01 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/16 13:04:29 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/16 13:28:01 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,3 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	free(split);
 // }
-
-
