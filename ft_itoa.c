@@ -6,13 +6,13 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:35:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/16 13:25:36 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:59:25 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(int n)
+static int	count(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	count(int n)
 	return (i);
 }
 
-void	fill_number(int j, int i, int n, char *s)
+static void	fill_number(int j, int i, int n, char *s)
 {
 	while (j > i)
 	{

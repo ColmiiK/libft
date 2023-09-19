@@ -6,13 +6,13 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:54:00 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/14 13:36:36 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:00:25 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	overflow(int c)
+static int	overflow(int c)
 {
 	while (c > 255)
 		c -= 256;
