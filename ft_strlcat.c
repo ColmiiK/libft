@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:18:14 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/14 12:50:58 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:18:20 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	unsigned int	j;
 	unsigned int	x;
 
-	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (src[j])
-		j++;
-	x = j;
+	i = ft_strlen(dest);
+	x = ft_strlen(src);
 	j = 0;
 	if (size < i)
 		x += size;
@@ -36,7 +31,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i] = 0;
 	return (x);
 }
 

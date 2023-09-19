@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 11:15:10 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/17 11:32:29 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:59:03 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (0);
-	while (lst->next != 0)
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

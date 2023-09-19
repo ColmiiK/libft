@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 17:08:40 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/14 12:54:30 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:25:14 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (c1[i] - c2[j]);
 }
+// int main()
+// {
+// 	char dst[20] = "lorem ipsum";
+// 	char src[20] = "dolor sit a";
+// 	size_t n = ft_strlen(dst);
+
+// 	printf("%i\n", ft_memcmp(dst, src, n));
+// }
