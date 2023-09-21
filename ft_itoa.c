@@ -12,21 +12,6 @@
 
 #include "libft.h"
 
-static int	count(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n <= 0)
-		i++;
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
-
 static void	fill_number(int j, int i, int n, char *s)
 {
 	while (j > i)
@@ -44,7 +29,7 @@ char	*ft_itoa(int n)
 	char	*s;
 
 	i = 0;
-	j = count(n);
+	j = digit_count(n);
 	s = (char *)malloc(sizeof(char) * j + 1);
 	if (!s)
 		return (0);
