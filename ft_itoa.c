@@ -6,11 +6,26 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:35:46 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/19 16:59:25 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:17:23 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	digit_count(int n)
+{
+	int	i;
+
+	i = 0;
+	if (n <= 0)
+		i++;
+	while (n != 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
 
 static void	fill_number(int j, int i, int n, char *s)
 {
