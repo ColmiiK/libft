@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:56:19 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/09/25 12:18:40 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/10/11 11:43:06 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ size_t				ft_strlen(const char *str);
 void				*ft_memset(void *str, int c, size_t len);
 
 /**
- * @brief 	Modifies a string in memory by replacing a set amount of characters with null, returning said modified string
+ * @brief 	Modifies a string in memory by replacing a set amount of 
+ * characters with null, returning said modified string
  * 
  * @param str String to be modified
  * @param n Amount of characters to modify
@@ -99,7 +100,8 @@ void				*ft_memset(void *str, int c, size_t len);
 void				*ft_bzero(void *str, size_t n);
 
 /**
- * @brief Copies a given amount of characters from one string in memory to another, returning the modified string
+ * @brief Copies a given amount of characters from one string in 
+ * memory to another, returning the modified string
  * 
  * @param dst String to copy to
  * @param src String to copy from
@@ -158,8 +160,9 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 
 /**
- * @brief Checks for a given character in a string, returning a pointer to the first
- * occurrence of the character if it's found or null if it isn't
+ * @brief Checks for a given character in a string, returning a 
+ * pointer to the first occurrence of the character 
+ * if it's found or null if it isn't
  * 
  * @param s String to check
  * @param c Character to find
@@ -168,8 +171,9 @@ int					ft_tolower(int c);
 char				*ft_strchr(const char *s, int c);
 
 /**
- * @brief Checks for a given character in a string, returning a pointer to the last
- * occurrence of the character if it's found or null if it isn't
+ * @brief Checks for a given character in a string, returning a 
+ * pointer to the last occurrence of the character 
+ * if it's found or null if it isn't
  * 
  * @param s String to check
  * @param c Character to find
@@ -190,8 +194,9 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
- * @brief For an amount of given characters, checks for a given character in an array of memory,
- * returning a pointer to the first occurrence of the character if it's found or null if it isn't
+ * @brief For an amount of given characters, checks for a given character 
+ * in an array of memory, returning a pointer to the first occurrence of 
+ * the character if it's found or null if it isn't
  * 
  * @param s String to check
  * @param c Character to find
@@ -201,9 +206,9 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 
 /**
- * @brief Compares two arrays in memory for a given amount of characters, returning
- * the difference of the values of the first characters that are different, or null
- * if there isn't any difference
+ * @brief Compares two arrays in memory for a given amount of characters, 
+ * returning the difference of the values of the first characters that are 
+ * different, or null if there isn't any difference
  * 
  * @param s1 First string to compare
  * @param s2 Second string to compare
@@ -213,9 +218,10 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**
- * @brief Finds a given string in another string for a set amount of characters,
- * returning a pointer to the start of the found string if it appears or null if it doesn't.
- * If the string to find is empty, it returns the first string
+ * @brief Finds a given string in another string for a set amount of 
+ * characters, returning a pointer to the start of the found string 
+ * if it appears or null if it doesn't. If the string to find is 
+ * empty, it returns the first string
  * 
  * @param haystack String to search in
  * @param needle String to find
@@ -226,9 +232,9 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 
 /**
- * @brief Transforms a string of numbers into an integer, returning said integer.
- * It skips control characters and spaces until it finds a digit, stopping if it finds
- * anything else other than a digit.
+ * @brief Transforms a string of numbers into an integer, returning 
+ * said integer. It skips control characters and spaces until it 
+ * finds a digit, stopping if it finds anything else other than a digit.
  * 
  * @param str String to transform
  * @return int 
@@ -236,8 +242,9 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 int					ft_atoi(const char *str);
 
 /**
- * @brief Allocates a set amount of memory of a specific size, initializing it with null terminators
- * and returning a pointer to the start of said memory
+ * @brief Allocates a set amount of memory of a specific size,
+ * initializing it with null terminators and returning a pointer 
+ * to the start of said memory
  * 
  * @param n Amount of spaces in memory
  * @param size Size of those spaces
@@ -246,8 +253,8 @@ int					ft_atoi(const char *str);
 void				*ft_calloc(size_t n, size_t size);
 
 /**
- * @brief Duplicates a string from stack memory to heap memory, allocating as needed and
- * returning a pointer to said heap memory
+ * @brief Duplicates a string from stack memory to heap memory, 
+ * allocating as needed and returning a pointer to said heap memory
  * 
  * @param s String to duplicate
  * @return char* 
@@ -255,8 +262,9 @@ void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *s);
 
 /**
- * @brief Copies a set amount of characters from a string given a starting position, duplicating
- * and allocating it, returning said subsection
+ * @brief Copies a set amount of characters from a string given 
+ * a starting position, duplicating and allocating it, returning 
+ * said subsection
  * 
  * @param s String to copy from
  * @param start Index to start copying from
@@ -305,8 +313,8 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 
 /**
- * @brief Applies a given function to all characters of a string, returning the new
- * allocated transformed string
+ * @brief Applies a given function to all characters of a string, 
+ * returning the new allocated transformed string
  * 
  * @param s String to transform
  * @param f Function to apply
@@ -315,8 +323,8 @@ char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
- * @brief Applies a given function to all characters of a string, returning the new
- * transformed string
+ * @brief Applies a given function to all characters of a string, 
+ * returning the new transformed string
  * 
  * @param s String to transform
  * @param f Function to apply
@@ -356,17 +364,89 @@ void				ft_putendl_fd(char *s, int fd);
  */
 void				ft_putnbr_fd(int n, int fd);
 
-
+/**
+ * @brief Creates a node with a given content, making it point
+ * to null
+ * 
+ * @param content Content to add to the node
+ * @return t_list* 
+ */
 t_list				*ft_lstnew(void *content);
+
+/**
+ * @brief Adds a given node to the head of the given list
+ * 
+ * @param lst List to put the node on top
+ * @param new Node to place
+ */
 void				ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Returns the current amount of nodes in a list
+ * 
+ * @param lst List to search
+ * @return int 
+ */
 int					ft_lstsize(t_list *lst);
+
+/**
+ * @brief Returns the current last node in a list
+ * 
+ * @param lst List to find the last node of
+ * @return t_list* 
+ */
 t_list				*ft_lstlast(t_list *lst);
+
+/**
+ * @brief Adds a node to the end of a given list
+ * 
+ * @param lst List to place the node on
+ * @param new Node to place at the end
+ */
 void				ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * @brief Deletes a given node of a list
+ * 
+ * @param lst Node to delete
+ * @param del Function to delete and free the node
+ */
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/**
+ * @brief Deletes and clears a given list
+ * 
+ * @param lst List to delete and clear
+ * @param del Function to delete and free the list with
+ */
 void				ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ * @brief Applies a given function to the nodes of a list
+ * 
+ * @param lst Node to start the application from
+ * @param f Function to apply
+ */
 void				ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * @brief Applies a given function to a list, deleting and clearing the
+ * list in case of failure
+ * 
+ * @param lst List to transform
+ * @param f Function to apply
+ * @param del Function to delete and clear
+ * @return t_list* 
+ */
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+
+/**
+ * @brief Writes a number in a given base
+ * 
+ * @param nbr Int to write
+ * @param base Base to write in
+ */
 void				ft_putnbr_base(int nbr, char *base);
 
 #endif
