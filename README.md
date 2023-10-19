@@ -5,52 +5,52 @@ of creating and implementing your own library in C.
 
 ### Basic functions
 
-• isalpha	• isdigit
+• isalpha		• isdigit
 
-• isalnum	• isascii
+• isalnum		• isascii
 
-• isprint	• strlen
+• isprint		• strlen
 
-• memset	• memcpy
+• memset		• memcpy
 
-• memmove	• strlcpy
+• memmove		• strlcpy
 
-• strlcat	• toupper
+• strlcat		• toupper
 
-• tolower	• strchr
+• tolower		• strchr
 
-• strrchr	• strncmp
+• strrchr		• strncmp
 
-• memchr	• memcmp
+• memchr		• memcmp
 
-• strnstr	• atoi
+• strnstr		• atoi
 
-• calloc	• strdup
+• calloc		• strdup
 
 • bzero
 
 ### Additional functions
 
-• ft_substr	• ft_strjoin
+• ft_substr			• ft_strjoin
 
-• ft_strtrim	• ft_split
+• ft_strtrim		• ft_split
 
-• ft_itoa	• ft_strmapi
+• ft_itoa			• ft_strmapi
 
-• ft_striteri	• ft_putchar_fd
+• ft_striteri		• ft_putchar_fd
 
-• ft_putstr_fd	• ft_putendl_fd
+• ft_putstr_fd		• ft_putendl_fd
 
 • ft_putnbr_fd
 
 ### Bonus functions
 
-• ft_lstnew	• ft_lstadd_front
+• ft_lstnew			• ft_lstadd_front
 
-• ft_lstsize	• ft_lstlast
+• ft_lstsize		• ft_lstlast
 
 • ft_lastadd_back	• ft_lstdelone
 
-• ft_lstclear	• ft_lstiter
+• ft_lstclear		• ft_lstiter
 
 • ft_lstmap
