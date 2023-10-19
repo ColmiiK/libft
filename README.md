@@ -4,7 +4,7 @@ This project consists of a series of basic, additional and bonus functions, with
 of creating and implementing your own library in C.
 
 ### Basic functions
-
+```
 • isalpha
 • isdigit
 • isalnum
@@ -28,9 +28,9 @@ of creating and implementing your own library in C.
 • atoi
 • calloc
 • strdup
-
+```
 ### Additional functions
-
+```
 • ft_substr
 • ft_strjoin
 • ft_strtrim
@@ -42,9 +42,9 @@ of creating and implementing your own library in C.
 • ft_putstr_fd
 • ft_putendl_fd
 • ft_putnbr_fd
-
+```
 ### Bonus functions
-
+```
 • ft_lstnew
 • ft_lstadd_front
 • ft_lstsize
@@ -54,3 +54,4 @@ of creating and implementing your own library in C.
 • ft_lstclear
 • ft_lstiter
 • ft_lstmap
+```
