@@ -55,3 +55,8 @@ of creating and implementing your own library in C.
 • ft_lstiter
 • ft_lstmap
 ```
+### Functions added after completing the project
+```
+• get_next_line
+• ft_printf
+```
