@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:56:19 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/10/19 16:38:00 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/11/03 11:36:40 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -457,6 +457,15 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
  */
 void				ft_putnbr_base(int nbr, char *base);
 
+/**
+ * @brief Prints any number of arguments to the standard output. Supports 
+ conversions like %s, %c, %i, %u, %x, %X, %p and %%. Doesn't support
+ modifying flags nor returns -1 on error.
+ * 
+ * @param input Sring to print
+ * @param ... Any number of arguments to print
+ * @return int Number of characters printed
+ */
 int					ft_printf(char const *input, ...);
 int					print_char(char c);
 int					print_integer(int nb);
