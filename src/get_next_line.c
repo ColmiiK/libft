@@ -6,11 +6,11 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:30:02 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/10/19 16:05:10 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:21:11 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static char	*string_join(char *s1, char *s2)
 {
@@ -120,4 +120,3 @@ char	*get_next_line(int fd)
 	}
 	return (result);
 }
-
