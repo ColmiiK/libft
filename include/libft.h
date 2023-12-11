@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:56:19 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/11/13 13:58:35 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:59:09 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -302,8 +302,8 @@ char				*ft_strtrim(char const *s1, char const *set);
 
 /**
 
-	* @brief Separates a string into substrings when encountering a given character,
- * returning a 2D array of said substrings
+ * @brief Separates a string into substrings when encountering a 
+ * given character, returning a 2D array of said substrings
  *
  * @param s String to separate
  * @param c Character that delimitates the strings
