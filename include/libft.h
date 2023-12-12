@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:56:19 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/12/11 15:59:09 by alvega-g         ###   ########.fr       */
+/*   Updated: 2023/12/12 10:54:44 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
