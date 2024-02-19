@@ -6,7 +6,7 @@
 /*   By: alvega-g <alvega-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:56:19 by alvega-g          #+#    #+#             */
-/*   Updated: 2023/12/14 11:46:24 by alvega-g         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:20:08 by alvega-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdbool.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -501,5 +502,20 @@ char				*get_next_line(int fd);
  * failed.
  */
 void				*ft_realloc(void *ptr, size_t new_size);
+
+/**
+ * @brief Splits a string into tokens based on a delimiter.
+ *
+ * This function takes a string and a delimiter as input and splits 
+ * the string into tokens.
+ * It returns a pointer to the first token found in the string, 
+ * or NULL if no token is found.
+ *
+ * @param str The string to be tokenized.
+ * @param del The delimiter used to split the string.
+ * @return A pointer to the first token found in the string, 
+ * or NULL if no token is found.
+ */
+char				*ft_strtok(char *str, char *del);
 
 #endif
